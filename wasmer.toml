@@ -1,0 +1,20 @@
+[package]
+name = "Aziz12add/python-ws"
+version = "0.1.0"
+description = "python ws"
+
+[[module]]
+name = "python-ws"
+source = "app.py"
+abi = "python"
+
+[dependencies]
+python = "3.11"
+
+[[command]]
+name = "script"
+module = "python-ws"
+runner = "https://webc.org/runner/wasi-python"
+
+[command.args]
+args = ["app.py"]
